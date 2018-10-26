@@ -1,5 +1,6 @@
 package org.workfort.contact
 
+import android.app.Application
 import android.content.Context
 import android.support.multidex.MultiDexApplication
 import org.workfort.contact.data.AppDatabase
@@ -18,7 +19,7 @@ import org.workfort.contact.data.AppDatabase
 *  ****************************************************************************
 */
 
-class App : MultiDexApplication() {
+open class App : Application() {
     companion object {
         private lateinit var context:Context
         fun getContext():Context{
